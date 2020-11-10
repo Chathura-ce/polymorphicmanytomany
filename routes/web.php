@@ -50,3 +50,11 @@ Route::get('/update',function (){
 //    $post->tags()->sync([2]);
 
 });
+
+Route::get('/delete',function (){
+    $post = Post::findOrFail(2);
+
+    foreach($post->tags as $tag){
+        $tag->whereId(3)->delete();
+    }
+});
