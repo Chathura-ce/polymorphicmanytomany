@@ -33,3 +33,20 @@ Route::get('/read',function (){
         echo $tag;
    }
 });
+
+
+Route::get('/update',function (){
+    /*$post = Post::findOrFail(1);
+    foreach ($post->tags as $tag) {
+       return $tag->whereName('php')->update(['name'=>'updated name']);
+    }*/
+
+    $post = Post::findOrFail(1);
+
+    $tag = Tag::find(3);
+
+//    $post->tags()->save($tag);
+
+//    $post->tags()->sync([2]);
+
+});
