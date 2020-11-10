@@ -25,3 +25,11 @@ Route::get('/create', function () {
 
     $video->tags()->save($tag2);
 });
+
+
+Route::get('/read',function (){
+   $post = Post::findOrFail(1);
+    foreach ($post->tags as $tag) {
+        echo $tag;
+   }
+});
